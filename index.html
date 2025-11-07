@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CoreZone Gym</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- use forward slashes for local path and the filename you uploaded -->
+      <img src="assets/images/Gemini_Generated_Image_j4e2rkj4e2rkj4e2.png" alt="CoreZone Logo" class="brand-logo">
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#plans">Plans</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#join">Join</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO (slider with 3 images) -->
+  <section id="home" class="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="slide" style="background-image:url('https://img.freepik.com/free-photo/view-gym-room-training-sports_23-2151699540.jpg?semt=ais_hybrid&w=1400&q=80')">
+        <div class="hero-overlay"></div>
+        <div class="slide-content">
+          <h1>CoreZone</h1>
+          <p class="lead">Train smart. Train hard. Become unstoppable.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#join">Join Now</a>
+            <a class="btn-outline" href="#plans">View Plans</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20241224/pngtree-a-fully-equipped-gym-with-dumbbells-weight-machines-and-cardio-equipment-image_16843660.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="slide-content">
+          <h1>Expert Trainers</h1>
+          <p class="lead">Personalized programs, certified coaches.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#trainers">Meet Trainers</a>
+            <a class="btn-outline" href="#schedule">Book Session</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image:url('https://t3.ftcdn.net/jpg/08/27/87/60/360_F_827876077_k0EWo3jSiWZPR8fRgsSbZFT9SkrozNuj.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="slide-content">
+          <h1>Modern Facilities</h1>
+          <p class="lead">State-of-the-art equipment & flexible timings.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#gallery">Explore</a>
+            <a class="btn-outline" href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <div class="section-grid">
+      <div>
+        <h2>About CoreZone</h2>
+        <p>CoreZone is a modern fitness studio focused on results — expert coaching, structured plans and an energetic community to push you forward.</p>
+        <ul class="features">
+          <li>Certified trainers</li>
+          <li>Flexible memberships</li>
+          <li>Personal & group training</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/026/781/389/small/gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo.jpg" alt="Gym interior">
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans" class="section bg-light">
+    <div class="container">
+      <h2 class="center">Membership Plans</h2>
+      <p class="center lead">Choose the plan that matches your goals.</p>
+
+      <div class="plans-grid">
+        <div class="plan-card" data-plan-id="1">
+          <h3>Monthly</h3>
+          <p class="price">₹999 <span class="duration">/ month</span></p>
+          <ul>
+            <li>Unlimited gym access</li>
+            <li>1 PT session</li>
+            <li>Group classes</li>
+          </ul>
+          <button class="btn-outline select-plan">Select</button>
+        </div>
+
+        <div class="plan-card popular" data-plan-id="2">
+          <div class="popular-badge">Popular</div>
+          <h3>Quarterly</h3>
+          <p class="price">₹2,699 <span class="duration">/ 3 months</span></p>
+          <ul>
+            <li>Unlimited access</li>
+            <li>3 PT sessions</li>
+            <li>Nutrition consult</li>
+          </ul>
+          <button class="btn select-plan">Select</button>
+        </div>
+
+        <div class="plan-card" data-plan-id="3">
+          <h3>Yearly</h3>
+          <p class="price">₹9,499 <span class="duration">/ year</span></p>
+          <ul>
+            <li>All access + discounts</li>
+            <li>12 PT sessions</li>
+            <li>Priority booking</li>
+          </ul>
+          <button class="btn-outline select-plan">Select</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section id="trainers" class="section container">
+    <h2 class="center">Meet Our Trainers</h2>
+    <div class="trainers-grid" id="trainersGrid">
+      <article class="trainer-card" data-trainer-id="T1">
+        <div class="trainer-photo">
+          <img src="https://ntc.ie/wp-content/uploads/2024/12/fitness-trainer-certification-dublin-expectations.webp" alt="Trainer 1">
+        </div>
+        <h3>Rohit Pande</h3>
+        <p class="spec">Strength & Conditioning</p>
+        <p class="contact">+91-99999-11111</p>
+        <div class="trainer-actions">
+          <button class="btn-outline view-profile">Profile</button>
+          <button class="btn book-session" data-trainer-id="T1">Book</button>
+        </div>
+      </article>
+
+      <article class="trainer-card" data-trainer-id="T2">
+        <div class="trainer-photo">
+          <img src="https://c.superprof.com/i/m/16632074/600/20250225051810/16632074.webp" alt="Trainer 2">
+        </div>
+        <h3>Priya Desai</h3>
+        <p class="spec">Functional Trainer</p>
+        <p class="contact">+91-88888-22222</p>
+        <div class="trainer-actions">
+          <button class="btn-outline view-profile">Profile</button>
+          <button class="btn book-session" data-trainer-id="T2">Book</button>
+        </div>
+      </article>
+
+      <article class="trainer-card" data-trainer-id="T3">
+        <div class="trainer-photo">
+          <img src="https://fitnessfuelfactory.com/wp-content/uploads/2022/04/personal-trainer-keerthi.jpg" alt="Trainer 3">
+        </div>
+        <h3>Amit Patel</h3>
+        <p class="spec">Yoga & Mobility</p>
+        <p class="contact">+91-77777-33333</p>
+        <div class="trainer-actions">
+          <button class="btn-outline view-profile">Profile</button>
+          <button class="btn book-session" data-trainer-id="T3">Book</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SCHEDULE / BOOKING -->
+  <section id="schedule" class="section bg-light">
+    <div class="container">
+      <h2 class="center">Book a Session</h2>
+      <div class="booking-area">
+        <form id="bookingForm" class="booking-form">
+          <input type="hidden" name="trainer_id" id="booking_trainer_id">
+          <label>Member ID<input name="member_id" id="booking_member_id" placeholder="M1001" required></label>
+          <label>Choose Date<input type="date" name="date" id="booking_date" required></label>
+          <label>Time slot
+            <select name="time_slot" id="booking_time" required>
+              <option value="">Select</option>
+              <option>06:00</option>
+              <option>07:00</option>
+              <option>08:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Confirm Booking</button>
+        </form>
+
+        <div class="booking-list" id="bookingList">
+          <h3>Your Bookings</h3>
+          <table id="bookingTable"><thead><tr><th>Member</th><th>Trainer</th><th>Date</th><th>Time</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section container">
+    <h2 class="center">Gallery</h2>
+    <div class="gallery-grid" id="galleryGrid">
+      <img class="gallery-item" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=600&q=60" alt="">
+      <img class="gallery-item" src="https://images.unsplash.com/photo-1623874106686-5be2b325c8f1?auto=format&fit=crop&w=600&q=60" alt="">
+      <img class="gallery-item" src="https://images.unsplash.com/photo-1623874514711-0f321325f318?auto=format&fit=crop&w=600&q=60" alt="">
+      <img class="gallery-item" src="https://plus.unsplash.com/premium_photo-1664109999781-27f77214bcfc?auto=format&fit=crop&w=600&q=60" alt="">
+      <img class="gallery-item" src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=600&q=60" alt="">
+      <img class="gallery-item" src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=600&q=60" alt="">
+    </div>
+  </section>
+
+  <!-- JOIN / REGISTER -->
+  <section id="join" class="section bg-light">
+    <div class="container">
+      <h2 class="center">Join CoreZone</h2>
+      <p class="center lead">Sign up — fields match your ER model (member table).</p>
+
+      <form id="joinForm" class="join-form">
+        <label>Member ID<input name="member_id" id="member_id" placeholder="M1001" required></label>
+        <label>Name<input name="name" id="member_name" required></label>
+        <label>Contact No<input name="contact_no" id="member_contact" required></label>
+        <label>Join Date<input type="date" name="join_date" id="member_join_date" required></label>
+        <label>Select Plan
+          <select name="plan_id" id="member_plan">
+            <option value="1">Monthly</option>
+            <option value="2">Quarterly</option>
+            <option value="3">Yearly</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Register & Pay</button>
+      </form>
+      <div id="joinMsg" class="center small muted"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2 class="center">Contact Us</h2>
+    <div class="contact-grid">
+      <form id="contactForm" class="contact-form">
+        <label>Name<input name="name" id="contact_name" required></label>
+        <label>Email<input name="email" id="contact_email" type="email" required></label>
+        <label>Message<textarea name="message" id="contact_message" rows="4" required></textarea></label>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Visit Us</h3>
+        <p>CoreZone Gym, Shatabdi Square , Nagpur</p>
+        <p>Phone: +91-99999-00000</p>
+        <!-- Map removed as requested -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN / ATTENDANCE (frontend mock) -->
+  <section id="admin" class="section bg-light">
+    <div class="container">
+      <h2 class="center">Attendance (Admin)</h2>
+      <div class="admin-grid">
+        <button id="loadAttendance" class="btn-outline">Load Attendance</button>
+        <table id="attendanceTable"><thead><tr><th>Member</th><th>Trainer</th><th>Date</th><th>Status</th></tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/images/Gemini_Generated_Image_j4e2rkj4e2rkj4e2.png" alt="CoreZone" class="footer-logo">
+      </div>
+      <div>© <span id="year"></span> CoreZone Gym</div>
+      <div class="socials">
+        <a href="#" aria-label="instagram">Instagram</a>
+        <a href="#" aria-label="facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content">
+      <button id="lightboxClose" class="close">✕</button>
+      <img src="" alt="preview" id="lightboxImg">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

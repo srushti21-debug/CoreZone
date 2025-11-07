@@ -1,0 +1,149 @@
+:root{
+  --accent: #e63946;
+  --bg: #ffffff;
+  --muted: #666;
+  --card: #ffffff;
+  --glass: rgba(230,57,70,0.06);
+  --text: #111;
+  --shadow: rgba(15,15,15,0.06);
+}
+
+/* keep existing reset and base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Poppins",system-ui,Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* container */
+.container{max-width:1150px;margin:0 auto;padding:60px 20px}
+
+/* HEADER (updated logo sizing) */
+.header{
+  position:fixed;left:0;right:0;top:0;z-index:200;
+  background:rgba(0,0,0,0.85);
+  transition: background .25s ease, box-shadow .25s;
+  border-bottom: 2px solid rgba(230,57,70,0.12);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:8px 20px}
+
+/* *** ENLARGED LOGO *** */
+.brand-logo{
+  height:110px;        /* increased so logo is readable */
+  width:auto;
+  object-fit:contain;
+  transition:transform 0.25s ease;
+}
+.brand-logo:hover{ transform:scale(1.03); }
+
+/* navigation */
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:#fff;text-decoration:none;font-weight:500;padding:8px 10px;border-radius:6px;transition:background .18s,color .18s}
+.nav a:hover{background:var(--glass); color:var(--accent)}
+.menu-btn{display:none;background:transparent;border:0;color:#fff;font-size:22px;cursor:pointer}
+
+/* HERO */
+.hero{height:calc(100vh - 120px);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-slider{width:100%;height:100%;display:flex;transition:transform .6s ease} /* do NOT hardcode width:300% */
+.slide{min-width:100%;height:100%;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;position:relative}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45),rgba(0,0,0,0.6));pointer-events:none}
+.slide-content{position:relative;z-index:2;text-align:center;padding:20px;max-width:900px}
+.slide-content h1{font-size:48px;margin-bottom:12px;letter-spacing:0.6px;color:#fff;text-shadow: 0 6px 18px rgba(0,0,0,0.45)}
+.slide-content .lead{color:#fff;margin-bottom:18px}
+.hero-ctas{display:flex;gap:14px;justify-content:center}
+.btn, .btn-outline{padding:12px 22px;border-radius:8px;text-decoration:none;display:inline-block;border:0;cursor:pointer;font-weight:600}
+.btn{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(230,57,70,0.18)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.18)}
+
+/* Sections */
+.section{padding:80px 0}
+.bg-light{background:#fafafa;color:#000}
+
+/* ABOUT */
+.section-grid{display:grid;grid-template-columns:1fr 420px;gap:30px;align-items:center}
+.about-image img{width:100%;border-radius:12px;box-shadow:0 12px 32px var(--shadow)}
+
+/* PLANS */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+.plan-card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 8px 28px rgba(15,15,15,0.06);position:relative;transition:transform .18s,box-shadow .18s}
+.plan-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(15,15,15,0.08)}
+.plan-card h3{margin-bottom:10px}
+.price{font-size:20px;font-weight:700;color:var(--accent)}
+.duration{font-weight:500;color:var(--muted);font-size:13px}
+.popular{border:1px solid rgba(230,57,70,0.06)}
+.popular-badge{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;padding:6px 10px;border-radius:8px;font-weight:700}
+
+/* TRAINERS */
+.trainers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trainer-card{background:#fff;padding:16px;border-radius:12px;text-align:center;box-shadow:0 8px 24px rgba(15,15,15,0.06)}
+.trainer-photo{height:260px;border-radius:8px;overflow:hidden;margin-bottom:12px}
+.trainer-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.trainer-actions{display:flex;gap:8px;justify-content:center;margin-top:10px}
+
+/* BOOKING */
+.booking-area{display:flex;gap:30px;align-items:flex-start;flex-wrap:wrap}
+.booking-form{background:#fff;padding:16px;border-radius:10px;min-width:300px;flex:1;box-shadow:0 8px 22px rgba(15,15,15,0.06)}
+.booking-form label{display:block;margin-bottom:10px;color:var(--muted);font-size:14px}
+.booking-form input,.booking-form select{width:100%;padding:8px;border-radius:6px;border:1px solid #eee;background:transparent;color:var(--text)}
+.booking-list{flex:1;min-width:320px;background:#fff;padding:16px;border-radius:10px;box-shadow:0 8px 22px rgba(15,15,15,0.06)}
+.booking-list table{width:100%;border-collapse:collapse}
+.booking-list th, .booking-list td{padding:8px;text-align:left;border-bottom:1px solid #f3f3f3;font-size:14px}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gallery-item{width:100%;height:180px;object-fit:cover;border-radius:8px;cursor:pointer;display:block}
+
+/* JOIN FORM */
+.join-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 22px rgba(15,15,15,0.06)}
+.join-form label{display:block;color:var(--muted);font-size:14px}
+.join-form input, .join-form select{width:100%;padding:10px;border-radius:8px;border:1px solid #eee;background:transparent;color:var(--text)}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+
+/* CONTACT GRID */
+.contact-grid{display:grid;grid-template-columns:1fr 340px;gap:20px}
+.contact-form{background:#fff;padding:16px;border-radius:10px;box-shadow:0 8px 22px rgba(15,15,15,0.06)}
+.contact-info{background:#fff;padding:16px;border-radius:10px;box-shadow:0 8px 22px rgba(15,15,15,0.06)}
+
+.contact-info p{color:var(--muted); margin:6px 0;}
+
+/* ADMIN TABLE */
+.admin-grid{display:flex;flex-direction:column;gap:12px}
+#attendanceTable{width:100%;border-collapse:collapse}
+#attendanceTable th,#attendanceTable td{padding:8px;border-bottom:1px solid #f3f3f3;color:var(--muted)}
+
+/* FOOTER (use same logo in footer) */
+.footer{padding:30px 0;background:#000;color:#fff;border-top:2px solid var(--accent)}
+.footer-inner{display:flex;flex-direction:row;justify-content:space-between;align-items:center;max-width:1150px;margin:0 auto;padding:0 20px}
+.footer-logo{height:80px;}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.75);display:none;align-items:center;justify-content:center;z-index:999}
+.lightbox-content{position:relative;max-width:90%;max-height:90%}
+.lightbox img{max-width:100%;max-height:80vh;border-radius:8px}
+.lightbox .close{position:absolute;top:-14px;right:-14px;background:#fff;border-radius:50%;border:0;padding:6px;cursor:pointer;color:var(--muted)}
+
+/* Responsive tweak for logo and hero */
+@media (max-width:980px){
+  .trainers-grid{grid-template-columns:repeat(2,1fr)}
+  .plans-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .section-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .menu-btn{display:block}
+  .brand-logo{height:86px}
+}
+@media (max-width:600px){
+  .trainers-grid{grid-template-columns:1fr}
+  .plans-grid{grid-template-columns:1fr}
+  .join-form{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .gallery-item{height:140px}
+  .slide-content h1{font-size:32px}
+  .brand-logo{height:72px}
+}
